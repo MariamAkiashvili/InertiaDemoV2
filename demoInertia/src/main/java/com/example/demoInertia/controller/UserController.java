@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demoInertia.dto.APIResponse;
 import com.example.demoInertia.dto.Login;
-import com.example.demoInertia.model.APIResponse;
 import com.example.demoInertia.model.User;
 import com.example.demoInertia.service.UserService;
 
@@ -22,7 +22,7 @@ public class UserController {
     private UserService userService;
 
 
-    @PostMapping("/add")
+    @PostMapping("/registration")
     public String add(@RequestBody User user){
         userService.saveUser(user);
         return "Registration Completed Successfully!";

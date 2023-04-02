@@ -1,7 +1,7 @@
 package com.example.demoInertia.service;
 
+import com.example.demoInertia.dto.APIResponse;
 import com.example.demoInertia.dto.Login;
-import com.example.demoInertia.model.APIResponse;
 import com.example.demoInertia.model.User;
 
 public interface UserService {
