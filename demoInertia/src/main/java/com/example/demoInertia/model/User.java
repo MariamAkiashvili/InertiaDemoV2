@@ -13,6 +13,34 @@ public class User {
     
     private int id;
     private String firstName, lastName, email, password, smsNumber;
+    private String personType;
+    private boolean isAdmin, isHost;
+
+
+    public boolean isAdmin() {
+        return isAdmin;
+    }
+
+    public void setAdmin(boolean isAdmin) {
+        this.isAdmin = isAdmin;
+    }
+
+    public boolean isHost() {
+        return isHost;
+    }
+
+    public void setHost(boolean isHost) {
+        this.isHost = isHost;
+    }
+
+    public String getPersonType() {
+        return personType;
+    }
+
+    public void setPersonType(String personType) {
+        this.personType = personType;
+    }
+
     private boolean isLogged;
 
     public boolean isLogged() {

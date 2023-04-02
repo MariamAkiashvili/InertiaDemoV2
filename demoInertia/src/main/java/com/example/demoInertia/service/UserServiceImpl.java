@@ -3,8 +3,8 @@ package com.example.demoInertia.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demoInertia.dto.APIResponse;
 import com.example.demoInertia.dto.Login;
-import com.example.demoInertia.model.APIResponse;
 import com.example.demoInertia.model.User;
 import com.example.demoInertia.repository.UserRepository;
 
@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService{
     public APIResponse usedEmail(String email){
         APIResponse apiResponse = new APIResponse();
 
-        if(userRepository.findOneByEmailIgnoreCase(email) == null){
+        if(userRepository.findOneByEmailIgnoreCase(email) != null){
             //409 conflict with database
             //using already used email in records
             apiResponse.setCode(409);
